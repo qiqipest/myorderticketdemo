@@ -1,0 +1,1980 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="./css/global.css" rel="stylesheet" type="text/css" />
+<!-- <link href="./css/flights.css" rel="stylesheet" type="text/css" /> -->
+<link href="./css/bw.css" rel="stylesheet" type="text/css" />
+<link href="./css/base.css" rel="stylesheet" type="text/css" />
+<!--
+<link href="/styles/global.css" rel="stylesheet" type="text/css" /><link href="/styles/flights.css" rel="stylesheet" type="text/css" /><link href="/images/favicon.ico" type="images/x-icon" rel="Bookmark" /><link href="/images/favicon.ico" type="images/x-icon" rel="shortcut icon" />
+-->
+<!--        <script src="./js/jquery-1.10.1.min.js" type="text/javascript"></script>-->
+        <script src="./js/comme.js" type="text/javascript"></script>
+        <script src="./js/WdatePicker.js" type="text/javascript"></script>
+        <script src="./js/bw.js" type="text/javascript"></script>
+        <script src="./js/b.js" type="text/javascript"></script>
+        <script src="./js/photochange.js" type="text/javascript"></script>
+        <script src="./js/jquery-1.3.2.min.js" type="text/javascript"></script>
+        <script src="./js/comme.js" type="text/javascript"></script>
+        <script src="./js/tuna_100324_jsLoader.js" type="text/javascript"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/fltInternational1_gb2312.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/fltInternational0_gb2312.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/tuna_100324.js"></script>
+        <script src="./js/index_domestic.js" type="text/javascript"></script>
+        <script src="./js/selected_city.js" type="text/javascript"></script>
+        <script src="./js/Calendar3.js" type="text/javascript"></script>
+
+        
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a,a:visited{color:#5e5e5e; text-decoration:none;}
+a:hover{color:#4183C4;text-decoration:underline;}
+table{empty-cells:show;border-collapse:collapse;border-spacing:0;}
+body{margin:0;padding:0;text-align:center;font-size:12px;}
+
+.demo{width:670px;margin:20px auto;}
+.inputbox{border:1px solid #7f9db9;height:20px;line-height:20px;width:147px;}
+.inputbox .stext{border:0px;height:18px;line-height:18px;width:125px;margin:0;padding:0;float:left;color:#000;}
+.inputbox .keyicon{margin:3px;padding:0;float:right}
+.inputbox .keyicon img{cursor:pointer;}
+/* 选择城市样式 */
+.search_li02{width:150px;}
+.list_main{width:150px;}
+.choose_frame{clear:both;float:left;text-align:left;width:372px;}
+.choose_frame .list_head{border-bottom:1px dashed #D7D7D7;height:27px;padding-left:5px;width:367px;}
+.choose_frame .list_head .fleft li{cursor:pointer;float:left;height:27px;line-height:27px;margin-right:2px;text-align:center;width:65px;}
+.choose_frame .list_head .fcenter{float:left;line-height:27px;padding-left:10px;}
+.choose_frame .list_head .fright{float:right;padding-right:10px;padding-top:7px;}
+.city_sugg{clear:both;float:left;line-height:22px;width:372px;}
+.city_sugg li{float:left;padding-left:11px;width:50px;}
+.more_city{float:right;padding-bottom:5px;padding-right:12px;}
+.search_li01{background:url("./images/bj_01.gif") no-repeat scroll 0 2px transparent;}
+.search_li02{background:url("./images/bj_02.gif") no-repeat scroll 0 2px transparent;font-weight:bold;}
+.city_list2{border-bottom:1px dashed #D7D7D7;height:27px;line-height:27px;width:372px;}
+.city_list2 li{float:left;padding-left:7px;}
+.city_list2 a:hover{color:#FF6000;font-size:16px;font-weight:bold;}
+.unshow{display:none;}
+.link01 a:link, .link01 a{color:#2860AE;text-decoration:none;}
+.link01 a:visited{color:#2860AE;text-decoration:none;}
+.link01 a:hover{color:#FF6000;text-decoration:none;}
+.link01 a:active{color:#2860AE;text-decoration:none;}
+.list_main{float:left;width:372px;}
+.suggest-container{background:none repeat scroll 0 0 white;float:left;width:175px;z-index:99999;}
+.suggest-container .ds_input_tips{color:#666666;line-height:22px;text-align:left;}
+.suggest-container .ds_input_tips_no{background-color:#FF8040;margin:0;padding-left:10px;width:165px;}
+.suggest-container .ds_input_tips_one{border-bottom:1px dashed #AAAAAA;margin:0 5px;padding-left:5px;width:160px;}
+.suggest-container .ds_input_tips_full{border-bottom:1px dashed #AAAAAA;margin:0 5px;padding-left:5px;width:160px;}
+.suggest-container ol{float:left;padding:2px 5px;width:165px;}
+.suggest-container li{border-bottom:1px solid #FFFFFF;border-top:1px solid #FFFFFF;color:#0055AA;float:left;font-size:12px;line-height:20px;padding:1px 0 2px;width:100%;}
+.suggest-container dl{float:left;font-size:12px;line-height:20px;padding:0 2px;width:95%;}
+.suggest-container dt, .suggest-container dd{color:#414141;float:left;font-size:12px;line-height:20px;list-style:none outside none;width:99%;}
+.suggest-container .top_mover{background:none repeat scroll 0 0 #E7F1FD;border-bottom:1px solid #7F9DB9;border-top:1px solid #7F9DB9;color:#0055AA;cursor:pointer;}
+.suggest-container .top_mout{background:none repeat scroll 0 0 #FFFFFF;border-bottom:1px solid #FFFFFF;border-top:1px solid #FFFFFF;color:#0055AA;}
+.suggest-container .ds_selected{background:none repeat scroll 0 0 #C8E3FC;color:#0055AA;cursor:pointer;}
+.suggest-container .ds_selected span{color:#0055AA;cursor:pointer;}
+.suggest-container .suggest-result{color:#0055AA;cursor:pointer;float:right;padding-right:5px;text-align:right;white-space:nowrap;}
+.suggest-container .suggest-key{float:left;padding-left:5px;text-align:left;}
+.suggest-container li, .suggest-bottom{clear:both;overflow:hidden;}
+.suggest-shim{z-index:99998;}
+.suggest-bottom{padding:0 5px 5px;}
+.suggest-close-btn{float:right;}
+.on{color:#FF6000;font-size:16px;font-weight:bold;}
+.off{color:#195CB5;}
+.city_sugg a:link{color:#333;}
+.city_sugg a:hover{color:#FF6600;}
+</style>
+        
+        
+        
+        
+</title><meta name="Description" content="上海和谐票务有限公司订票服务平台，专业提供：机票预订，火车票预订，票务服务"><meta name="keywords" content="上海和谐票务有限公司，机票预订，订票，车票，预定，票务">
+</head>
+<body>
+    <!-- 头部 -->
+    <div id="WarningMsg" style="">
+    <div class='content'>
+        <strong>温馨提示：</strong>和谐票务有限公司可申请美联航、达美、AA、加航、英航、维珍、卡航、阿联酋、汉莎、国泰、国航、东航飞国际所有航线，承接国际月结大客户
+        <div style="position: absolute; right: 5px; top: 2px; font-weight: bold; cursor: pointer;
+            margin-left: 5px;" onclick="document.getElementById('WarningMsg').style.display='none';">
+            ×
+        </div>
+    </div>
+</div>
+<!-- 头部 -->
+<div id="Header">
+    <div class='top'>
+        <div class='middle'>
+            <div class='right'>
+                <span id='My_info' class='off'><strong><a href='/memberusers/index.aspx'>和谐票务</a></strong>
+                    <div class='list'>
+                        <a href='/memberusers/order_detail.aspx'>订单查询</a> 
+                        <!--
+                        <a href='/memberusers/memberUser.aspx'>
+                            个人信息</a> <a href='/memberusers/mod_pwd.aspx'>修改密码</a> 
+                            -->
+                    </div>
+                </span><a href='/memberusers/autausch.aspx' style="padding-left: 1px">积分奖励</a> |
+                <a href='/help'>帮助中心</a> | <a href='/feed'>意见反馈</a>
+            </div>
+            
+			<div class='left'>
+				<span class='tel'>021-56590166</span>
+                            <!-----
+				<a href='/integral/login.aspx'>登录</a>
+				<a href='/integral/regist'>注册</a>
+                -->
+			</div>
+			
+            
+        </div>
+    </div>
+    <div class='middle banner'>
+        <a class='logo' title='和谐票务' href='/'></a>
+        <div class='ad'>
+            <img src='./images/banner4.jpg' height="47" width="480">
+        </div>
+        <div class='tel'>
+            全国服务热线 <strong>021-56590166</strong>
+        </div>
+    </div>
+    <div class='nav'>
+        <div class='right_bg'>
+        </div>
+        <ul class='middle' >
+            <li id="r01"><a href='/'><strong>首页</strong></a></li>
+            <li id="r02"><a href="/reserve"><strong>国际机票</strong></a></li>
+            <li id="r05"><a href='/stuList'><span class='hot'>HOT</span><strong>国内机票</strong></a></li>
+            <li id="r03"><a href='/team'><strong>团队机票</strong></a></li>
+            <!-----   <li id="r04" ><a href='/speca'><strong>商务头等</strong></a><div class="hot">优惠</div></li>----->
+            <li id="r04"><a href='/speca'><strong>商务头等</strong></a></li>
+            <!--  <li id="r05" ><a href='/flight_watch'><strong>在线选座</strong></a></li>-->
+         <!--   <li id="r06"><a href="/zx"><strong>航空资讯</strong></a></li>-->
+            <li id="r07"><a href='/bank'><strong>公司介绍</strong></a></li>
+            <li id="r08"><a href='/zizhi.html'><strong>服务特色</strong></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 头部 -->
+
+<script type="text/javascript"> 
+
+window.onbeforeunload = function() 
+{     
+    var n = window.event.screenX - window.screenLeft;     
+    var b = n > document.documentElement.scrollWidth-20;      
+    if(b && window.event.clientY < 0 || window.event.altKey) 
+    {
+            document.cookie="GrouponUserAuth"+"="+escape('');
+
+    } 
+//    else
+//    {
+//         alert("是刷新而非关闭");
+//    }   
+ }
+</script>
+
+
+
+    <!-- end 头部 -->
+    <!-- 内容部分 -->
+    <div id="Wapper">
+        <!-- 左 -->
+        <div id='Index_left'>
+            <!-- 搜索 -->
+            <div class='search'>
+                <div class='menu'>
+                </div>
+                <div class='content'>
+                    <div style="height: 0px;" id="jsContainer" class="jsContainer">
+                        <textarea style="display: none" id="jsSaveStatus"></textarea>
+                        <div style="z-index: 999; position: absolute; display: none; overflow: hidden" id="tuna_alert">
+                        </div>
+                        <div style="z-index: 120; position: absolute; visibility: hidden" id="tuna_jmpinfo">
+                        </div>
+                        <div style="z-index: 99999; display: none; top: 0px" id="tuna_calendar" class="tuna_calendar">
+                        </div>
+                    </div>
+                    <form id="searchform" name="searchform" method="post" class="form">
+                    <div class='item'>
+                        <label>
+                            航班类型：</label>
+                        <div class='cnt'>
+                           <label> <input name="rdodan" id="rdodan1" type="radio" onclick="showhide(this)" value="2"
+                                checked />
+                            往返</label>
+                           <label> <input name="rdodan" id="rdodan2" type='radio' onclick="showhide(this)" value="1" />
+                            单程</label> &nbsp;&nbsp; <!--<a style="cursor: pointer" href="/team">联程</a>-->
+                            <input id="rdotype" name="rdotype" type="hidden" value="" />
+                            <input id="tickettype" name="tickettype" type="hidden" value="1" />
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <label>
+                            出发城市：</label>
+                        <div class='cnt'>
+                            <input id="StartCity" value="" type="hidden" name="StartCity">
+                            <input id="EndCity" value="" type="hidden" name="EndCity">
+                            <input class="text  city" size='26' style="cursor: pointer" id="ddlOrgCity" class="flightListInp"
+                                value="中文/拼音" name="ddlOrgCity" onclick="suggestF.display(this,'',event);">
+
+                        </div>
+                             <!--
+                        <div class="inputbox">
+                            <input name="ddlOrgCity" type="text" value="中文/拼音" id="ddlOrgCity" onclick="suggestF.display(this,'',event);" onkeydown="item_suggest.item_display(this,'',event);" onblur="item_suggest.item_onblur(this);" class="stext" />
+                            <span class="keyicon"><img src="images/city.gif" border="0" id="imgddlOrgCity" name="ddlOrgCity" onclick="Text_OnClick('ddlOrgCity')" /></span>
+                        </div>
+           
+                        <div class='cnt'>
+                            <input id="StartCity" value="" type="hidden" name="StartCity">
+                            <input id="EndCity" value="" type="hidden" name="EndCity">
+                            <input class="text  city" size='26' style="cursor: pointer" id="StartInput" class="flightListInp"
+                                value="" name="StartInput" mod_address_reference="StartCity" mod="address|notice"
+                                mod_notice_tip="中文/英文" mod_address_source="fltInternational1" mod_address_suggest="@London|伦敦|LON,伦敦|LD@Cairo|开罗|CAI,开罗|KL@Hong Kong|香港|HKG,香港|XG@Paris|巴黎|PAR,巴黎|BL@Frankfurt|法兰克福|FRA,法兰克福|FLKF@Johannesburg|约翰内斯堡|JNB,约翰内斯堡|YHNSB@taipei|松山机场|TPE,松山机场|SSJC@Cape Town|开普敦|CPT,开普敦|KPD@Macau|澳门|MFM,澳门|AM@Moscow|莫斯科|MOW,莫斯科|MSK@Nairobi|内罗毕|NBO,内罗毕|NLB@Kaohsiung|高雄|KHH,高雄|GX@Rome|罗马|ROM,罗马|LM">
+                        </div>
+                        -->
+                    </div>
+                    <div class='item'>
+                        <label>
+                            到达城市：</label>
+                        <div class='cnt'>
+                            <input style="cursor: pointer" id="EndInput" class="text  city" size='26' value="中文/拼音"
+                                name="EndInput" name="ddlDesCity" onclick="suggestF.display(this,'ddlOrgCity2',event);">
+                        </div>
+                             <!--
+			<div class="inputbox">
+				<input name="ddlDesCity" type="text" value="中文/拼音" id="ddlDesCity" onclick="suggestF.display(this,'ddlOrgCity2',event);" onkeydown="item_suggest.item_display(this,'',event);" onblur="item_suggest.item_onblur(this);" class="stext" />
+				<span class="keyicon"><img src="images/city.gif" border="0" id="imgddlDesCity" name="ddlDesCity" onclick="Text_OnClick('ddlDesCity')" /></span>
+			</div>
+                        <div class='cnt'>
+                            <input style="cursor: pointer" id="EndInput" class="text  city" size='26' value=""
+                                name="EndInput" mod_address_reference="EndCity" mod="address|notice" mod_notice_tip="中文/英文"
+                                mod_address_source="fltInternational0" mod_address_suggest="@London|伦敦|LON,伦敦|LD@Cairo|开罗|CAI,开罗|KL@Hong Kong|香港|HKG,香港|XG@Paris|巴黎|PAR,巴黎|BL@Frankfurt|法兰克福|FRA,法兰克福|FLKF@Johannesburg|约翰内斯堡|JNB,约翰内斯堡|YHNSB@taipei|松山机场|TPE,松山机场|SSJC@Cape Town|开普敦|CPT,开普敦|KPD@Macau|澳门|MFM,澳门|AM@Moscow|莫斯科|MOW,莫斯科|MSK@Nairobi|内罗毕|NBO,内罗毕|NLB@Kaohsiung|高雄|KHH,高雄|GX@Rome|罗马|ROM,罗马|LM">
+                        </div>
+                        //                    <input name="control_date" type="text" id="control_date" size="10"
+//                        maxlength="10" onclick="new Calendar().show(this);" readonly="readonly" />
+//                    <input type="button" name="button" id="button" value="button" onclick="new Calendar().show(this.form.control_date);" /></span>
+                        -->
+                    </div>
+                    <div class='item'>
+                        <label>
+                            出发日期：</label>
+                        <div class='cnt'>
+                            <input size='26' class="text time" type="text" name="control_date" id="control_date" onclick="new Calendar().show(this);" readonly="readonly"
+                                mod="notice|calendar" mod_notice_tip="yyyy-mm-dd" mod_address_focusnext="true"
+                                mod_calendar_rangestart="#" mod_calendar_rangeend="">
+                        </div>
+                    </div>
+                    <div class='item' id="d_date2" style="display: ">
+                        <label>
+                            返程日期：</label>
+                        <div class='cnt'>
+                            <input size='26' class="text time" type="text" name="control_date" id="control_date" onclick="new Calendar().show(this);" readonly="readonly"
+                                mod="notice|calendar" mod_notice_tip="yyyy-mm-dd" mod_calendar_rangestart="#"
+                                mod_address_focusnext="true" mod_calendar_reference="txtDDatePeriod2" mod_calendar_rangeend="">
+                        </div>
+                    </div>
+                    <div class='item submit'>
+                        <button value="" type="button" class="btn" id="domestic_searching" name="domestic_searching"
+                            onclick="return indexformsearch();">
+                        </button>
+                        <a class='yz' href='http://www.travelsky.com/' target="_blank">机票验真&gt;&gt;</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end 搜索 -->
+            <!-- 留学生专场 -->
+            <div class='title'>
+                留学生专场 <span class='hot'></span>
+            </div>
+            <div class='content student'>
+                <ul>
+                    <li><span>3500起</span><img src='images/guoqi/g1.gif' width='28' height='20' /><a href='/stuList' target="_blank">上海到美国留学生特价(单程)</a></li>
+                    <li><span>3123起</span><img src='images/guoqi/g2.gif'  width='28' height='20' /><a href='/stuList' target="_blank">2013
+                        英航留学生特价</a></li>
+                    <li><span>2180起</span><img src='images/guoqi/g3.gif'  width='28' height='20' /><a href='/stuList' target="_blank">北京到英国学生机票(单程)</a></li>
+                    <li><span>2800起</span><img src='images/guoqi/g4.gif'  width='28' height='20' /><a href='/stuList' target="_blank"'>曼彻斯特阿联酋航空..(单程)</a></li>
+                    <li class='no'><span>3123起</span><img src='images/guoqi/g5.gif' width='28' height='20' ><a href='/stuList' target="_blank">英国伦敦留学生特价</a></li>
+                </ul>
+            </div>
+            <!-- end 留学生专场 -->
+            <!-- 最新预订航线 -->
+            <div class='title'>
+                最新预订航线</div>
+            <div  id="demo" class='content'  style="clear: both; overflow: hidden; height: 90px;  margin: 0 auto;">
+              <div id="demo1">
+                <ul> 
+                
+                    <li><dfn class='gray'>[63分钟前]</dfn><a class='blue' href='#'>
+                     往返到广州 洛杉矶 CZ327
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[38分钟前]</dfn><a class='blue' href='#'>
+                     往返到上海 法兰克福 CA935
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[49分钟前]</dfn><a class='blue' href='#'>
+                     往返到广州 洛杉矶 CZ327
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[50分钟前]</dfn><a class='blue' href='#'>
+                     往返到上海 多伦多 EK303
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[83分钟前]</dfn><a class='blue' href='#'>
+                     往返到上海 东京 DL296
+                     </a></li>
+                    
+                   
+                </ul>
+                </div>
+                 <div id="demo2">
+        </div>
+            </div>
+            <!-- end 最新预订航线 -->
+        </div>
+        <!-- end 左 -->
+        <!-- 右 -->
+        <div id='Index_right'>
+            <div class='main'>
+                <div class='banner'>
+                    <div id="imgADPlayer">
+                    </div>
+                </div>
+                <div class='post'>
+                    <!--<a href="/images/other/cata.jpg" target="_blank">
+                        <img src='images/renzhen.jpg' alt="齐星认证" width='208' height='70'></a>-->
+                        	<div class='rz'>
+					<p>中国航协权威认证</p>
+					<h2><a href='http://www.cata.org.cn/clientWeb/frm_Single_Search.aspx?name=%u9F50%u661F&type=agentname&leixing=%u5BA2%u8FD0&chengshi=&chengqu=' target="_blank">航协号：HD21249</a></h2>
+				</div>
+                    <ul class='bao'>
+                        <li><a href='#'>1.天天低价</a></li>
+                        <li><a href='#'>2.支付成功100%出票</a></li>
+                        <li><a href='#'>3.便捷支付,支持票到付款</a></li>
+                        <li><a href='#'>4.尊享“退改”秘书服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='blank'>
+            </div>
+            <div>
+                <img src='/images/banner7.jpg'  width='680' height='86' /></div>
+            <div class='blank'>
+            </div>
+            <!-- 特价机票 -->
+            <div id='sub' class='submenu'>
+                <div class='tit'>
+                    <div class='name'>
+                        特价机票</div>
+                    <ul>
+                        <li class='current'>美洲</li>
+                        <li>欧洲</li>
+                        <li>澳洲</li>
+                        <li>东南亚</li>
+                        <li>日韩</li>
+                        <li>港澳台</li>
+                    </ul>
+                </div>
+                <form method="post" name="zhuhformname" id="zhuhformname">
+                <div class='cnt' style="width: 658px;">
+                    <div class='dancen'>
+                    </div>
+                    <div class='wangfan'>
+                    </div>
+                    <div class='switch' style='display: '>
+                        <div class='left'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('1','1','SHA','上海','西雅图','SEA')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    西雅图
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    UA858
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥8960</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','温哥华','YVR')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    温哥华
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    AC026
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-16
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3900</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','洛杉矶','LAX')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    洛杉矶
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    AC026
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥6970</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','旧金山','SFO')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    旧金山
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    AC026
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-16
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥6750</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','华盛顿','WAS')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    华盛顿
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    TK027
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5770</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','芝加哥','CHI')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    芝加哥
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    TK027
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-16
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5850</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','纽约','NYC')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    纽约
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    LH733
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4180</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','费城','PHL')">
+                                            <td>
+                                              
+                                                    上海
+                                                       ➝
+                                                    费城
+                                            </td>
+                                            <td>
+                                                <span  class="orange">
+                                                    UA216
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥9500</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                        <div class='right'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('2','1','SHA','上海','洛杉矶','LAX')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    洛杉矶</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    AA288
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-16
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥7350</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','迈阿密','MIA')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    迈阿密</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    DL296
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5580</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','BJS','北京','温哥华','YVR')">
+                                            <td>
+                                                <a href='#'>
+                                                    北京
+                                                     <span class='wf'></span>
+                                                    温哥华</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CA991
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-16
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥6100</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','多伦多','YTO')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    多伦多</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    AC088
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥13920</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','纽约','NYC')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    纽约</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    TK027
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5390</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','芝加哥','CHI')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    芝加哥</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    TK027
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥6590</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','旧金山','SFO')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    旧金山</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OZ362
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5200</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','西雅图','SEA')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                     <span class='wf'></span>
+                                                    西雅图</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OZ364
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4990</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                    <div class='switch' style="display: none">
+                        <div class='left'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('1','1','SHA','上海','赫尔辛基','HEL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    赫尔辛基</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    AY058
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5580</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','伊斯坦布尔','IST')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    伊斯坦布尔</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    EY867
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥2790</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','罗马','ROM')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    罗马</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KE896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4800</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','BJS','北京','柏林','BER')">
+                                            <td>
+                                                <a href='#'>
+                                                    北京
+                                                    ➝
+                                                    柏林</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OS064
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥8050</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','BJS','北京','苏黎士','ZRH')">
+                                            <td>
+                                                <a href='#'>
+                                                    北京
+                                                    ➝
+                                                    苏黎士</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OS065
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥8200</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','巴黎','PAR')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    巴黎</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA865
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3080</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','法兰克福','FRA')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    法兰克福</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA805
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3287</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','阿姆斯特丹','AMS')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    阿姆斯特丹</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA805
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3270</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                        <div class='right'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('2','1','SHA','上海','布达佩斯','BUD')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    布达佩斯</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    AY058
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5290</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','慕尼黑','MUC')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    慕尼黑</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KL896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4850</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','杜塞尔多夫','DUS')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    杜塞尔多夫</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KL896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4850</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','法兰克福','FRA')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    法兰克福</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KL896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5700</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','巴塞罗那','BCN')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    巴塞罗那</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KL896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4850</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','维也纳','VIE')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    维也纳</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KL896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4850</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','伦敦','LON')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    伦敦</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OZ368
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥7710</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','巴黎','PAR')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    巴黎</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OZ368
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥6780</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                    <div class='switch' style='display: none'>
+                        <div class='left'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('1','1','SHA','上海','阿德莱德','ADL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    阿德莱德</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA893
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4220</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','布里斯班','BNE')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    布里斯班</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA805
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4100</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','珀斯','PER')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    珀斯</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA857
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3420</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','凯恩斯','CNS')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    凯恩斯</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA805
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3400</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','墨尔本(澳大利亚)','MEL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    墨尔本(澳大利亚)</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA803
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3250</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                        <div class='right'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('2','1','SHA','上海','墨尔本(澳大利亚)','MEL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    墨尔本(澳大利亚)</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CX865
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4350</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','阿德莱德','ADL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    阿德莱德</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA893
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5330</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','布里斯班','BNE')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    布里斯班</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA805
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5280</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','珀斯','PER')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    珀斯</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CX136
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥4860</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','奥克兰(新西兰)','AKL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    奥克兰(新西兰)</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA875
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5680</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','悉尼(澳大利亚)','SYD')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    悉尼(澳大利亚)</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    OZ366
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥5780</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                    <div class='switch' style='display: none'>
+                        <div class='left'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('1','1','SHA','上海','马尼拉','MNL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    马尼拉</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KE898
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1780</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','加德满都','KTM')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    加德满都</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ3067
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1390</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','河内','HAN')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    河内</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ371
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1390</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','曼谷','BKK')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    曼谷</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ357
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1390</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','新加坡','SIN')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    新加坡</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ353
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1390</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','吉隆坡','KUL')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    吉隆坡</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ349
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1820</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','新德里','DEL')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    新德里</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ359
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1390</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                        <div class='right'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('2','1','CAN','广州','新加坡','SIN')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    <span class='wf'></span>
+                                                    新加坡</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ353
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥690</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','吉隆坡','KUL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    吉隆坡</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KE896
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3590</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','曼谷','BKK')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    曼谷</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    MH387
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥720</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','普吉','HKT')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    普吉</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    MH387
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥920</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','马尼拉','MNL')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    马尼拉</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    MH387
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥550</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('2','1','SHA','上海','河内','HAN')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    河内</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    MH387
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥440</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                    <div class='switch' style='display: none'>
+                        <div class='left'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('1','1','SHA','上海','大阪','OSA')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    大阪</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    FM821
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1300</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','CAN','广州','首尔','SEL')">
+                                            <td>
+                                                <a href='#'>
+                                                    广州
+                                                    ➝
+                                                    首尔</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    CZ313
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1130</span>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr onclick="return zhuform('1','1','SHA','上海','东京','TYO')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    东京</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    DL296
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥2000</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                        <div class='right'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('2','1','SHA','上海','东京','TYO')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    <span class='wf'></span>
+                                                    东京</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    DL296
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥3000</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                    <div class='switch' style='display: none'>
+                        <div class='left'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                                        <tr onclick="return zhuform('1','1','SHA','上海','台北','TPE')">
+                                            <td>
+                                                <a href='#'>
+                                                    上海
+                                                    ➝
+                                                    台北</a>
+                                            </td>
+                                            <td>
+                                                <span class="orange">
+                                                    KA875
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class='gray'>
+                                                    2013-06-23
+                                                    截止</span>
+                                            </td>
+                                            <td>
+                                                <span class='price'>¥1370</span>
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                        <div class='right'>
+                            <table class='tab' width='100%' cellspacing='0' cellpadding='0'>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <!-- end 特价机票 -->
+            <div class='blank'>
+            </div>
+            <!-- 热卖 优惠 回顾 -->
+            <!-- end 热卖 优惠 回顾 -->
+            <!-- 弹出窗口 -->
+            <div id='pop_bg' class='pop_bg' style="display: none">
+            </div>
+            <div id='pop' class='pop' style='width: 500px; left: 35%; top: 40%; display: none'>
+                <div class='title'>
+                    <a class='close' href='javascript:void(0)'>×</a> 特惠机票预订
+                </div>
+                <div class='content'>
+                    选择出发日期：
+                    <br>
+                    出发日期：
+                    <input size='26' class="text" type="text" name="txtfrom_time" id="txtfrom_time" mod="notice|calendar"
+                        mod_notice_tip="yyyy-mm-dd" mod_address_focusnext="true" mod_calendar_rangestart="#"
+                        mod_calendar_rangeend="">
+                    返程日期：
+                    <input size='26' class="text" type="text" name="txtto_time" id="txtto_time" mod="notice|calendar"
+                        mod_notice_tip="yyyy-mm-dd" mod_calendar_rangestart="#" mod_address_focusnext="true"
+                        mod_calendar_reference="txtfrom_time" mod_calendar_rangeend="">
+                    <div class='blank'>
+                    </div>
+                    <div class='tc'>
+                        <input type='button' class='btn' value='查看' onclick="gofum();" />
+                    </div>
+                </div>
+            </div>
+            <!-- 弹出窗口 -->
+            <form method="post" id="frmshow" name="frmshow">
+            <input type="hidden" name="rtype" id="rtype" />
+            <input type="hidden" name="fromcitycode" id="fromcitycode" />
+            <input type="hidden" name="fromcity" id="fromcity" />
+            <input type="hidden" name="tocitycode" id="tocitycode" />
+            <input type="hidden" name="tocity" id="tocity" />
+            <input type="hidden" name="fromtime" id="fromtime" />
+            <input type="hidden" name="totime" id="totime" />
+            <input type="hidden" name="chktype" id="chktype" />
+            <input type="hidden" name="ticketid" id="ticketid" />
+            <input type="hidden" name="custormertype" id="custormertype" />
+            <input type="hidden" name="cbtype" id="cbtype" />
+            </form>
+        </div>
+        <!-- end 右 -->
+    </div>
+    <!-- end 内容部分 -->
+    <!-- 尾部 -->
+    <!-- 尾部 -->
+<div id="Footer">
+	<div class='info'>
+		<div class='tel'>
+		<div class='name'>热线电话:</div>
+			<ul>
+				<li class='icon'></li>
+				<li class='t1'>4006-303-309</li>
+				<li class='t2'>021-61363299</li>
+			</ul>
+		</div>
+		<div class='about dian'>
+			<ul>
+				<li><a href='/aboutus/about.aspx'  target="_blank">公司介绍</a></li>
+				<li><a href='/aboutus/nous.aspx' target="_blank">乘机小常识</a></li>
+				<li><a href='/flight_watch' target="_blank">在线选座</a></li>
+				<li><a href='/aboutus/license.aspx' target="_blank">营业执照</a></li>
+				<li><a href="/aboutus/contact.html" target="_blank">联系我们</a></li>
+				<li><a href='/aboutus/changeTime.aspx' target="_blank">时差计算</a></li>
+				<li><a href='/jp/index.aspx' target="_blank">国际机票预定</a></li>
+				<li><a href='/jp/Requirementorder.aspx' target="_blank">团队机票预定</a></li>
+				<li><a href='/aboutus/cata.aspx' target="_blank">CATA资质</a></li>
+				<li><a href='/aboutus/job.aspx' target="_blank">招贤纳士</a></li>
+				<li><a href='http://www.bankofchina.com/sourcedb/lswhpj/' target="_blank">实时汇率</a></li>
+				<li><a href='/bank' target="_blank">在线支付</a></li>
+				<li><a href='/feed' target="_blank">投诉建议平台</a></li>
+				<li><a href='/help/index.aspx' target="_blank">帮助中心</a></li>
+				<li><a href='/aboutus/hanzhan.aspx' target="_blank">始发航站一览表</a></li>
+				<li><a href="/rewards" target="_blank">会员积分奖励</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 关于我们 -->
+	<address>
+		<a href='/aboutus/about.html'>关于QQ5166.com</a> | 
+		<a href='/aboutus/contact.html'>联系我们</a> |
+		<a href="/aboutus/agreement.aspx">本站协议</a>| 
+		<a href='/aboutus/Privacy.aspx'>隐私条款</a> | 
+		<a href='/aboutus/map.aspx'>网站地图</a> | 
+	<a href='/images/other/sc0004.gif' target="_blank">营业执照</a> | 
+		<a href='/images/other/cata.jpg' target="_blank">航空资质</a>
+		<br>
+		Copright &copy;2010-1025<span class="orange"> www.qq5166.com</span> All Rights Reserved  上海齐星票务代理有限公司  沪ICP备10020046号-1
+ 服务热线：021-61363299
+	</address>
+	<!-- end 关于我们 -->
+	<!-- 友情链接 -->
+	<div>
+		<a class='l1' title='公共信息安全' href='#'><img src="/images/img_wlaq.jpg" /></a>
+		<a class='l2' title='身份验证' href='#'><img src="/images/2012_beian.jpg" /></a>
+		<a><img src="/images/2012_110.jpg" /></a>
+		<a class='l4' title='支付宝' href='#'><img src="/images/img_zfb.jpg" /></a>
+		<a class='l6' title='财付通' href='#'><img  src="/images/img_cft.jpg"/></a>
+		<!--<a class='l8' title='企业营业执照认证' href='#'>企业营业执照认证</a>-->
+		<a href="http://trust.360.cn/search.php" target="_blank" title="360" ><img src="http://trust.360.cn/img.php?sn=4999&id=2" border="0" /></a>
+
+			<!--可信网站图片LOGO安装开始-->
+<script src="https://ss.cnnic.cn/seallogo.dll?sn=e12073031010033177308127&size=0"></script>
+<!--可信网站图片LOGO安装结束-->
+
+	<!-- end 友情链接 -->
+</div>
+
+<script  language="JavaScript" >
+document.writeln("<a href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120315184228225'><img src='/images/icon(1).gif' border=0></a>")</script>
+<script src="http://s16.cnzz.com/stat.php?id=2691961&web_id=2691961" language="JavaScript"></script>
+<script type="text/javascript">
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5405767e69cb665983e706a9102487c1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+window.onload=function(){
+
+                  var urlName=window.location.href;
+               
+                  if(urlName.indexOf("reserve")>-1){
+                      document.getElementById("r02").className="current";
+                  }else if(urlName.indexOf("team")>-1){
+                      document.getElementById("r03").className="current";
+                  }else if(urlName.indexOf("speca")>-1){
+                      document.getElementById("r04").className="current";
+                  }else if(urlName.indexOf("bank")>-1){
+                   document.getElementById("r07").className="current";
+                  }else if(urlName.indexOf("corp")>-1){
+               
+                 document.getElementById("r08").className="current";
+                  }
+                  else if(urlName.indexOf("flight_watch")>-1)
+                  {
+                    document.getElementById("r05").className="current";
+                  }
+                  else if(urlName.indexOf("zixun")>-1)
+                  {
+                        document.getElementById("r06").className="current";
+                  }
+                  else
+                  {
+                    if(urlName.indexOf("r01")>-1)
+                    document.getElementById("r01").className="current";
+                   
+                    }
+             } 
+
+</script>
+<!-- end 尾部 -->
+    <!-- end 尾部 -->
+
+
+
+</body>
+
+<script type='text/javascript'>
+BindCity("洛阳");
+              G.my_info('My_info','on','off')//我的齐星
+			G.tab('sub','tit','li','cnt','switch','current'); //特价机票
+			//G.tab('Popul','menu','li','content','switch','current'); //热卖 优惠 回顾	
+			 //弹出匡	
+            
+PImgPlayer.addItem( "国际机票", "/reserve", "/images/img/01.jpg");
+PImgPlayer.addItem( "留学生机票","/speca", "/images/img/02.jpg");
+PImgPlayer.addItem( "商务头等","http://www.qq5166.com/", "/images/img/03.jpg");
+PImgPlayer.init( "imgADPlayer", 460, 220 );
+ dvspeed();
+</script>
+
+</html>

@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="/media/css/global.css" rel="stylesheet" type="text/css" />
+<!-- <link href="./css/flights.css" rel="stylesheet" type="text/css" /> -->
+<link href="/media/css/bw.css" rel="stylesheet" type="text/css" />
+<link href="/media/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/media/css/city.css" rel="stylesheet" type="text/css" />
+<!--
+<link href="/styles/global.css" rel="stylesheet" type="text/css" /><link href="/styles/flights.css" rel="stylesheet" type="text/css" /><link href="/images/favicon.ico" type="images/x-icon" rel="Bookmark" /><link href="/images/favicon.ico" type="images/x-icon" rel="shortcut icon" />
+-->
+<!--        <script src="./js/jquery-1.10.1.min.js" type="text/javascript"></script>-->
+        <script src="./js/comme.js" type="text/javascript"></script>
+        <script src="./js/WdatePicker.js" type="text/javascript"></script>
+        <script src="./js/bw.js" type="text/javascript"></script>
+<!--        <script src="./js/b.js" type="text/javascript"></script> -->
+        <script src="./js/photochange.js" type="text/javascript"></script>
+        <script src="./js/jquery-1.3.2.min.js" type="text/javascript"></script>
+        <script src="./js/comme.js" type="text/javascript"></script>
+        <script src="./js/tuna_100324_jsLoader.js" type="text/javascript"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/fltInternational1_gb2312.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/fltInternational0_gb2312.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/tuna_100324.js"></script>
+        <script src="./js/index_domestic.js" type="text/javascript"></script>
+        <script src="./js/selected_city.js" type="text/javascript"></script>
+        <script src="./js/Calendar3.js" type="text/javascript"></script>
+
+        
+
+        
+        
+        
+        
+</title><meta name="Description" content="上海和谐票务有限公司订票服务平台，专业提供：机票预订，火车票预订，票务服务"><meta name="keywords" content="上海和谐票务有限公司，机票预订，订票，车票，预定，票务">
+</head>
+<body>
+    <!-- 头部 -->
+    <div id="WarningMsg" style="">
+    <div class='content'>
+        <strong>温馨提示：</strong>和谐票务有限公司可申请美联航、达美、AA、加航、英航、维珍、卡航、阿联酋、汉莎、国泰、国航、东航飞国际所有航线，承接国际月结大客户
+        <div style="position: absolute; right: 5px; top: 2px; font-weight: bold; cursor: pointer;
+            margin-left: 5px;" onclick="document.getElementById('WarningMsg').style.display='none';">
+            ×
+        </div>
+    </div>
+</div>
+<!-- 头部 -->
+<div id="Header">
+    <div class='top'>
+        <div class='middle'>
+            <div class='right'>
+                <span id='My_info' class='off'><strong><a href='/memberusers/index.aspx'>和谐票务</a></strong>
+                    <div class='list'>
+                        <a href='/memberusers/order_detail.aspx'>订单查询</a> 
+                        <!--
+                        <a href='/memberusers/memberUser.aspx'>
+                            个人信息</a> <a href='/memberusers/mod_pwd.aspx'>修改密码</a> 
+                            -->
+                    </div>
+                </span><a href='/memberusers/autausch.aspx' style="padding-left: 1px">积分奖励</a> |
+                <a href='/help'>帮助中心</a> | <a href='/feed'>意见反馈</a>
+            </div>
+            
+			<div class='left'>
+				<span class='tel'>021-56590166</span>
+                            <!-----
+				<a href='/integral/login.aspx'>登录</a>
+				<a href='/integral/regist'>注册</a>
+                -->
+			</div>
+			
+            
+        </div>
+    </div>
+    <div class='middle banner'>
+        <a class='logo' title='和谐票务' href='/'></a>
+        <div class='ad'>
+            <img src='./images/banner4.jpg' height="47" width="480">
+        </div>
+        <div class='tel'>
+            全国服务热线 <strong>021-56590166</strong>
+        </div>
+    </div>
+    <div class='nav'>
+        <div class='right_bg'>
+        </div>
+        <ul class='middle' >
+            <li id="r01"><a href='/'><strong>首页</strong></a></li>
+            <li id="r02"><a href="/reserve"><strong>国际机票</strong></a></li>
+            <li id="r05"><a href='/stuList'><span class='hot'>HOT</span><strong>国内机票</strong></a></li>
+            <li id="r03"><a href='/team'><strong>团队机票</strong></a></li>
+            <!-----   <li id="r04" ><a href='/speca'><strong>商务头等</strong></a><div class="hot">优惠</div></li>----->
+            <li id="r04"><a href='/speca'><strong>商务头等</strong></a></li>
+            <!--  <li id="r05" ><a href='/flight_watch'><strong>在线选座</strong></a></li>-->
+         <!--   <li id="r06"><a href="/zx"><strong>航空资讯</strong></a></li>-->
+            <li id="r07"><a href='/bank'><strong>公司介绍</strong></a></li>
+            <li id="r08"><a href='/zizhi.html'><strong>服务特色</strong></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 头部 -->
+
+<script type="text/javascript"> 
+
+window.onbeforeunload = function() 
+{     
+    var n = window.event.screenX - window.screenLeft;     
+    var b = n > document.documentElement.scrollWidth-20;      
+    if(b && window.event.clientY < 0 || window.event.altKey) 
+    {
+            document.cookie="GrouponUserAuth"+"="+escape('');
+
+    } 
+//    else
+//    {
+//         alert("是刷新而非关闭");
+//    }   
+ }
+</script>
+
+
+
+    <!-- end 头部 -->
+    <!-- 内容部分 -->
+    <div id="Wapper">
+        <!-- 左 -->
+        <div id='Index_left'>
+            <!-- 搜索 -->
+            <div class='search'>
+                <div class='menu'>
+                </div>
+                <div class='content'>
+                    <div style="height: 0px;" id="jsContainer" class="jsContainer">
+                        <textarea style="display: none" id="jsSaveStatus"></textarea>
+                        <div style="z-index: 999; position: absolute; display: none; overflow: hidden" id="tuna_alert">
+                        </div>
+                        <div style="z-index: 120; position: absolute; visibility: hidden" id="tuna_jmpinfo">
+                        </div>
+                        <div style="z-index: 99999; display: none; top: 0px" id="tuna_calendar" class="tuna_calendar">
+                        </div>
+                    </div>
+                    <form id="searchform" name="searchform" method="post" class="form">
+                    <div class='item'>
+                        <label>
+                            航班类型：</label>
+                        <div class='cnt'>
+                           <label> <input name="rdodan" id="rdodan1" type="radio" onclick="showhide(this)" value="2"
+                                checked />
+                            往返</label>
+                           <label> <input name="rdodan" id="rdodan2" type='radio' onclick="showhide(this)" value="1" />
+                            单程</label> &nbsp;&nbsp; <!--<a style="cursor: pointer" href="/team">联程</a>-->
+                            <input id="rdotype" name="rdotype" type="hidden" value="" />
+                            <input id="tickettype" name="tickettype" type="hidden" value="1" />
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <label>
+                            出发城市：</label>
+                        <div class='cnt'>
+                            <input id="StartCity" value="" type="hidden" name="StartCity">
+                            <input id="EndCity" value="" type="hidden" name="EndCity">
+                            <input class="text  city" size='26' style="cursor: pointer" id="ddlOrgCity" class="flightListInp"
+                                value="中文/拼音" name="ddlOrgCity" onclick="suggestF.display(this,'',event);">
+
+                        </div>
+                             <!--
+                        <div class="inputbox">
+                            <input name="ddlOrgCity" type="text" value="中文/拼音" id="ddlOrgCity" onclick="suggestF.display(this,'',event);" onkeydown="item_suggest.item_display(this,'',event);" onblur="item_suggest.item_onblur(this);" class="stext" />
+                            <span class="keyicon"><img src="images/city.gif" border="0" id="imgddlOrgCity" name="ddlOrgCity" onclick="Text_OnClick('ddlOrgCity')" /></span>
+                        </div>
+           
+                        <div class='cnt'>
+                            <input id="StartCity" value="" type="hidden" name="StartCity">
+                            <input id="EndCity" value="" type="hidden" name="EndCity">
+                            <input class="text  city" size='26' style="cursor: pointer" id="StartInput" class="flightListInp"
+                                value="" name="StartInput" mod_address_reference="StartCity" mod="address|notice"
+                                mod_notice_tip="中文/英文" mod_address_source="fltInternational1" mod_address_suggest="@London|伦敦|LON,伦敦|LD@Cairo|开罗|CAI,开罗|KL@Hong Kong|香港|HKG,香港|XG@Paris|巴黎|PAR,巴黎|BL@Frankfurt|法兰克福|FRA,法兰克福|FLKF@Johannesburg|约翰内斯堡|JNB,约翰内斯堡|YHNSB@taipei|松山机场|TPE,松山机场|SSJC@Cape Town|开普敦|CPT,开普敦|KPD@Macau|澳门|MFM,澳门|AM@Moscow|莫斯科|MOW,莫斯科|MSK@Nairobi|内罗毕|NBO,内罗毕|NLB@Kaohsiung|高雄|KHH,高雄|GX@Rome|罗马|ROM,罗马|LM">
+                        </div>
+                        -->
+                    </div>
+                    <div class='item'>
+                        <label>
+                            到达城市：</label>
+                        <div class='cnt'>
+                            <input style="cursor: pointer" id="EndInput" class="text  city" size='26' value="中文/拼音"
+                                name="EndInput" name="ddlDesCity" onclick="suggestF.display(this,'ddlOrgCity2',event);">
+                        </div>
+                             <!--
+			<div class="inputbox">
+				<input name="ddlDesCity" type="text" value="中文/拼音" id="ddlDesCity" onclick="suggestF.display(this,'ddlOrgCity2',event);" onkeydown="item_suggest.item_display(this,'',event);" onblur="item_suggest.item_onblur(this);" class="stext" />
+				<span class="keyicon"><img src="images/city.gif" border="0" id="imgddlDesCity" name="ddlDesCity" onclick="Text_OnClick('ddlDesCity')" /></span>
+			</div>
+                        <div class='cnt'>
+                            <input style="cursor: pointer" id="EndInput" class="text  city" size='26' value=""
+                                name="EndInput" mod_address_reference="EndCity" mod="address|notice" mod_notice_tip="中文/英文"
+                                mod_address_source="fltInternational0" mod_address_suggest="@London|伦敦|LON,伦敦|LD@Cairo|开罗|CAI,开罗|KL@Hong Kong|香港|HKG,香港|XG@Paris|巴黎|PAR,巴黎|BL@Frankfurt|法兰克福|FRA,法兰克福|FLKF@Johannesburg|约翰内斯堡|JNB,约翰内斯堡|YHNSB@taipei|松山机场|TPE,松山机场|SSJC@Cape Town|开普敦|CPT,开普敦|KPD@Macau|澳门|MFM,澳门|AM@Moscow|莫斯科|MOW,莫斯科|MSK@Nairobi|内罗毕|NBO,内罗毕|NLB@Kaohsiung|高雄|KHH,高雄|GX@Rome|罗马|ROM,罗马|LM">
+                        </div>
+                        //                    <input name="control_date" type="text" id="control_date" size="10"
+//                        maxlength="10" onclick="new Calendar().show(this);" readonly="readonly" />
+//                    <input type="button" name="button" id="button" value="button" onclick="new Calendar().show(this.form.control_date);" /></span>
+                        -->
+                    </div>
+                    <div class='item'>
+                        <label>
+                            出发日期：</label>
+                        <div class='cnt'>
+                            <input size='26' class="text time" type="text" name="control_date" id="control_date" onclick="new Calendar().show(this);" readonly="readonly"
+                                mod="notice|calendar" mod_notice_tip="yyyy-mm-dd" mod_address_focusnext="true"
+                                mod_calendar_rangestart="#" mod_calendar_rangeend="">
+                        </div>
+                    </div>
+                    <div class='item' id="d_date2" style="display: ">
+                        <label>
+                            返程日期：</label>
+                        <div class='cnt'>
+                            <input size='26' class="text time" type="text" name="control_date" id="control_date" onclick="new Calendar().show(this);" readonly="readonly"
+                                mod="notice|calendar" mod_notice_tip="yyyy-mm-dd" mod_calendar_rangestart="#"
+                                mod_address_focusnext="true" mod_calendar_reference="txtDDatePeriod2" mod_calendar_rangeend="">
+                        </div>
+                    </div>
+                    <div class='item submit'>
+                        <button value="" type="button" class="btn" id="domestic_searching" name="domestic_searching"
+                            onclick="return indexformsearch();">
+                        </button>
+                        <a class='yz' href='http://www.travelsky.com/' target="_blank">机票验真&gt;&gt;</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end 搜索 -->
+            <!-- 留学生专场 -->
+
+            <!-- end 留学生专场 -->
+            <!-- 最新预订航线 -->
+            <div class='title'>
+                最新预订航线</div>
+            <div  id="demo" class='content'  style="clear: both; overflow: hidden; height: 90px;  margin: 0 auto;">
+              <div id="demo1">
+                <ul> 
+                
+                    <li><dfn class='gray'>[63分钟前]</dfn><a class='blue' href='#'>
+                     往返到广州 洛杉矶 CZ327
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[38分钟前]</dfn><a class='blue' href='#'>
+                     往返到上海 法兰克福 CA935
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[49分钟前]</dfn><a class='blue' href='#'>
+                     往返到广州 洛杉矶 CZ327
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[50分钟前]</dfn><a class='blue' href='#'>
+                     往返到上海 多伦多 EK303
+                     </a></li>
+                    
+                    <li><dfn class='gray'>[83分钟前]</dfn><a class='blue' href='#'>
+                     往返到上海 东京 DL296
+                     </a></li>
+                    
+                   
+                </ul>
+                </div>
+
+            </div>
+            <!-- end 最新预订航线 -->
+        </div>
+        <!-- end 左 -->
+        <!-- 右 -->
+        <div id='Index_right'>
+            <div class='main'>
+                <div class='banner'>
+                    <div id="imgADPlayer">
+                    </div>
+                </div>
+                <div class='post'>
+                    <!--<a href="/images/other/cata.jpg" target="_blank">
+                        <img src='images/renzhen.jpg' alt="齐星认证" width='208' height='70'></a>-->
+                        	<div class='rz'>
+					<p>中国航协权威认证</p>
+					<h2><a href='http://www.cata.org.cn/clientWeb/frm_Single_Search.aspx?name=%u9F50%u661F&type=agentname&leixing=%u5BA2%u8FD0&chengshi=&chengqu=' target="_blank">航协号：XXXXXXX</a></h2>
+				</div>
+                    <ul class='bao'>
+                        <li><a href='#'>1.天天低价</a></li>
+                        <li><a href='#'>2.订单成功100%出票</a></li>
+                        <li><a href='#'>3.便捷支付,支持票到付款</a></li>
+                        <li><a href='#'>4.尊享“退改”秘书服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='blank'>
+            </div>
+            <div>
+                <img src='./images/banner7.jpg'  width='680' height='86' /></div>
+            <div class='blank'>
+            </div>
+            <!-- 特价机票 -->
+            <div id='sub' class='submenu'>
+                <div class='tit'>
+                    <div class='name'>
+                        特价机票</div>
+                    <ul>
+                     <!--   <li class='current'>美洲</li>-->
+                        <li >美洲</li>
+                        <li>欧洲</li>
+                        <li>澳洲</li>
+                        <li>东南亚</li>
+                        <li>日韩</li>
+                        <li>港澳台</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end 特价机票 -->
+            <div class='blank'>
+            </div>
+            <!-- 热卖 优惠 回顾 -->
+            <!-- end 热卖 优惠 回顾 -->
+            <!-- 弹出窗口 -->
+            <div id='pop_bg' class='pop_bg' style="display: none">
+            </div>
+            <div id='pop' class='pop' style='width: 500px; left: 35%; top: 40%; display: none'>
+                <div class='title'>
+                    <a class='close' href='javascript:void(0)'>×</a> 特惠机票预订
+                </div>
+                <div class='content'>
+                    选择出发日期：
+                    <br>
+                    出发日期：
+                    <input size='26' class="text" type="text" name="txtfrom_time" id="txtfrom_time" mod="notice|calendar"
+                        mod_notice_tip="yyyy-mm-dd" mod_address_focusnext="true" mod_calendar_rangestart="#"
+                        mod_calendar_rangeend="">
+                    返程日期：
+                    <input size='26' class="text" type="text" name="txtto_time" id="txtto_time" mod="notice|calendar"
+                        mod_notice_tip="yyyy-mm-dd" mod_calendar_rangestart="#" mod_address_focusnext="true"
+                        mod_calendar_reference="txtfrom_time" mod_calendar_rangeend="">
+                    <div class='blank'>
+                    </div>
+                    <div class='tc'>
+                        <input type='button' class='btn' value='查看' onclick="gofum();" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 右 -->
+    </div>
+    <!-- end 内容部分 -->
+    <!-- 尾部 -->
+    <!-- 尾部 -->
+<div id="Footer">
+	<div class='info'>
+		<div class='tel'>
+		<div class='name'>热线电话:</div>
+			<ul>
+				<li class='icon'></li>
+				<li class='t1'>4006-303-309</li>
+				<li class='t2'>021-61363299</li>
+			</ul>
+		</div>
+		<div class='about dian'>
+			<ul>
+				<li><a href='/aboutus/about.aspx'  target="_blank">公司介绍</a></li>
+				<li><a href='/aboutus/nous.aspx' target="_blank">乘机小常识</a></li>
+				<li><a href='/flight_watch' target="_blank">在线选座</a></li>
+				<li><a href='/aboutus/license.aspx' target="_blank">营业执照</a></li>
+				<li><a href="/aboutus/contact.html" target="_blank">联系我们</a></li>
+				<li><a href='/aboutus/changeTime.aspx' target="_blank">时差计算</a></li>
+				<li><a href='/jp/index.aspx' target="_blank">国际机票预定</a></li>
+				<li><a href='/jp/Requirementorder.aspx' target="_blank">团队机票预定</a></li>
+				<li><a href='/aboutus/cata.aspx' target="_blank">CATA资质</a></li>
+				<li><a href='/aboutus/job.aspx' target="_blank">招贤纳士</a></li>
+				<li><a href='http://www.bankofchina.com/sourcedb/lswhpj/' target="_blank">实时汇率</a></li>
+				<li><a href='/bank' target="_blank">在线支付</a></li>
+				<li><a href='/feed' target="_blank">投诉建议平台</a></li>
+				<li><a href='/help/index.aspx' target="_blank">帮助中心</a></li>
+				<li><a href='/aboutus/hanzhan.aspx' target="_blank">始发航站一览表</a></li>
+				<li><a href="/rewards" target="_blank">会员积分奖励</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 关于我们 -->
+	<address>
+		<a href='/aboutus/about.html'>关于QQ5166.com</a> | 
+		<a href='/aboutus/contact.html'>联系我们</a> |
+		<a href="/aboutus/agreement.aspx">本站协议</a>| 
+		<a href='/aboutus/Privacy.aspx'>隐私条款</a> | 
+		<a href='/aboutus/map.aspx'>网站地图</a> | 
+        <a href='/images/other/sc0004.gif' target="_blank">营业执照</a> | 
+		<br>
+
+	</address>
+	<!-- end 关于我们 -->
+	<!-- 友情链接 -->
+
+
+
+<!-- end 尾部 -->
+    <!-- end 尾部 -->
+</body>
+
+<script type='text/javascript'>
+//              G.my_info('My_info','on','off')//我的齐星
+//G.tab('sub','tit','li','cnt','switch','current'); //特价机票
+			//G.tab('Popul','menu','li','content','switch','current'); //热卖 优惠 回顾	
+			 //弹出匡	
+PImgPlayer.addItem( "特价机票", ".", "./images/img/01.jpg");
+PImgPlayer.addItem( "特价车票",".", "./images/img/02.jpg");
+PImgPlayer.addItem( "商务头等",".", "./images/img/03.jpg");
+PImgPlayer.init( "imgADPlayer", 460, 220 );
+ dvspeed();
+</script>
+</html>

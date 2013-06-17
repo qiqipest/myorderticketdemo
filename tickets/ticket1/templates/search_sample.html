@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Search</title>
+</head>
+<body>
+<form action="/search/" method="get">
+<input type="text" name="q">
+<input type="submit" value="Search">
+</form>
+<p>You searched for: <strong>{{ query }}</strong></p>
+{% if city %}
+<p>Found {{ city|length }} city{{ city|pluralize }}.</p>
+<ul>
+{% for c in city %}
+<li>{{ c.City_Pingyin }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No books matched your search criteria.</p>
+{% endif %}
+</body>
+</html>
